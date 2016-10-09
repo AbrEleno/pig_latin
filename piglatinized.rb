@@ -42,7 +42,7 @@ class PigLatin
       wrd.slice!(/^[^aeiou]+(?=[aeiou])/).delete(" ")
     end
   end
-  @@pig_sentence
+  @@pig_sentence.each {|w| print w}
  end
 
  # def sentence_pig_form
@@ -60,7 +60,7 @@ end
 # p piglatinized("hello how are you") == " ellohay owhay areway ouyay "
 pig = PigLatin.new
 #pig.sentence_to_change(sentence)
-p pig.piglatinized(sentence) #== " ellohay owhay areway ouyay "
+pig.piglatinized(sentence) #== " ellohay owhay areway ouyay "
 # p pig.sentence_pig_form
 # p pig_latin_word("cruel") == "uelcray"  
 # p pig_latin_word(word) #== "uelcray"  
